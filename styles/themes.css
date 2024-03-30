@@ -1,0 +1,85 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+
+
+:root.theme-light {
+    --color-primary: #000000;
+    --color-secondary: #FFFFFF;
+    --headings-font-weight: 700;
+    --page-main-font-weight: 400;
+    --text-color: var(--dark-color, #000000);
+    --page-background-color: var(--white-color, #ffffff);
+    --different__text-color: var(--white-color, #FFF);
+    --background-color: var(--white-color, #FFF);
+    --border__text-color: var(--dark-color, #000);
+    --heart__sparks-color: var(--heart__sparks);
+    --heart__contour-color: var(--dark-color, #000);
+    --page-background-image: repeating-linear-gradient(
+        to left,
+        #d3d3d3 0 2px,
+        #d3d3d300 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  }
+  
+  :root.theme-dark {
+    --headings-font-weight: 785;
+    --color-primary: #00CC14;
+    --color-secondary: #000000;
+    --page-main-font-weight: 465;
+    --border__text-color: var(--green-color, #00CC14);
+    --text-color: var(--green-color, #00cc14);
+    --background-color: var(--dark-color, #000);
+    --heart__contour-color: var(--green-color, #00CC14);
+    --page-background-color: var(--dark-color, #000000);
+    --different__text-color: var(--green-color, #00CC14);
+    --heart__sparks-color: var(--heart__sparks);
+    --page-background-image: repeating-linear-gradient(
+        to left,
+        #000000 0 2px,
+        #00000000 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px),
+      linear-gradient(to bottom, #007f0c, #004306);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-primary: #00CC14;
+      --color-secondary: #000000;
+      --headings-font-weight: 785;
+      --page-main-font-weight: 465;
+      --text-color: var(--green-color, #00cc14);
+      --background-color: var(--dark-color, #000);
+      --page-background-color: var(--dark-color, #000000);
+      --border__text-color: var(--green-color, #00CC14);
+      --heart__contour-color: var(--green-color, #00CC14);
+      --different__text-color: var(--green-color, #00CC14);
+      --heart__sparks-color: var(--heart__sparks);
+      --page-background-image: repeating-linear-gradient(
+          to left,
+          #000000 0 2px,
+          #00000000 2px 4px
+        ),
+        repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px),
+        linear-gradient(to bottom, #007f0c, #004306);
+    }
+  }
+
+  @media (prefers-color-scheme:light) {
+    :root {
+      --color-primary: #000000;
+      --color-secondary: #FFFFFF;
+      --background-color: var(--white-color, #FFF);
+      --border__text-color: var(--dark-color, #000);
+      --heart__sparks-color: var(--heart__sparks);
+      --heart__contour-color: var(--dark-color, #000);
+      --different__text-color: var(--white-color, #FFF);
+      --heart__main-color: var(--dark-color, #000);
+    }
+  }

@@ -1,0 +1,25 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --dark-color: #000;
+    --green-color: #00CC14;
+    --white-color: #FFF;
+    --color-secondary: #000000;
+    --color-primary: #00CC14;
+    --heart__sparks: red;
+    --text-color: var(--dark-color, #000000);
+    --page-background-color: var(--white-color, #ffffff);
+    --page-main-font-family: "Inter", sans-serif;
+    --page-main-font-weight: 400;
+    --page-accent-font-family: 'PressStart2P', 'fantasy';
+    --text-size: 18px;
+    --text-size-small: 14px;
+    --page-background-image: repeating-linear-gradient(
+        to left,
+        #d3d3d3 0 2px,
+        #d3d3d300 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --headings-font-weight: 700;
+  }
